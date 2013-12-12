@@ -18,8 +18,15 @@ package org.twdata.maven.mojoexecutor;
 import org.apache.maven.execution.MavenSession;
 import org.apache.maven.model.Plugin;
 import org.apache.maven.plugin.BuildPluginManager;
+import org.apache.maven.plugin.InvalidPluginDescriptorException;
 import org.apache.maven.plugin.MojoExecution;
 import org.apache.maven.plugin.MojoExecutionException;
+import org.apache.maven.plugin.MojoFailureException;
+import org.apache.maven.plugin.PluginConfigurationException;
+import org.apache.maven.plugin.PluginDescriptorParsingException;
+import org.apache.maven.plugin.PluginManagerException;
+import org.apache.maven.plugin.PluginNotFoundException;
+import org.apache.maven.plugin.PluginResolutionException;
 import org.apache.maven.plugin.descriptor.MojoDescriptor;
 import org.apache.maven.plugin.descriptor.PluginDescriptor;
 import org.apache.maven.project.MavenProject;
@@ -98,7 +105,8 @@ public class MojoExecutor {
 			MojoExecution exec = mojoExecution(mojoDescriptor, executionId, configuration);
 			env.getPluginManager().executeMojo(session, exec);
 		} 
-		catch (Exception e) {
+		catch (PluginNotFoundException | PluginResolutionException | PluginDescriptorParsingException | InvalidPluginDescriptorException | 
+					 MojoExecutionException | MojoFailureException | PluginConfigurationException | PluginManagerException e) {
 			throw new MojoExecutionException("Unable to execute mojo", e);
 		}
 	}

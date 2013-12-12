@@ -120,7 +120,7 @@ public abstract class AbstractGenericMojo extends AbstractMojo {
 	 * @throws MojoExecutionException Throws when error occurred in the clean plugin 
 	 */
 	protected void useCleanPlugin(Element ... elements) throws MojoExecutionException {
-		List<Element> tempElems = new ArrayList<Element>(Arrays.asList(elements));
+		List<Element> tempElems = new ArrayList<>(Arrays.asList(elements));
 		tempElems.add(new Element("excludeDefaultDirectories", "true"));
 		
 		// Configure the Maven Clean Plugin to clean working files

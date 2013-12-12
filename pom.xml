@@ -28,6 +28,8 @@
 				<version>3.0</version>
 				<configuration>
 					<encoding>${project.build.sourceEncoding}</encoding>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
 

@@ -28,7 +28,7 @@ public abstract class AbstractRoxConfigurableClientMojo extends AbstractGenericM
 	 * The filters to use for filtering dedicated tests
 	 */
 	@Parameter
-	protected List<String> filters = new ArrayList<String>(); 	
+	protected List<String> filters = new ArrayList<>(); 	
 	
 	/**
 	 * The character encoding scheme to be applied when filtering resources.
@@ -53,6 +53,7 @@ public abstract class AbstractRoxConfigurableClientMojo extends AbstractGenericM
 	 * 
 	 * @throws MojoExecutionException Throws when error occured in the clean plugin 
 	 */
+	@Override
 	protected abstract void run() throws MojoExecutionException;
 
 	/**
