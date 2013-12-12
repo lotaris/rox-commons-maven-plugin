@@ -19,8 +19,8 @@
 		<goals>
 			<goal>clean</goal>
 			<goal>install</goal>
-			<goal>versions:set</goal>
-			<goal>versions:commit</goal>
+<!--			<goal>versions:set</goal>
+			<goal>versions:commit</goal>-->
 			<goal>-e</goal>
 		</goals>
 		<activatedProfiles>
