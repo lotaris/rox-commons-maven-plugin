@@ -4,22 +4,13 @@
 
 ## Usage
 
-1. Clone the repository.
-
-2. Run the following command
-
-```bash
-cd <projectFolder>
-mvn clean install
-```
-
-3. Put the following dependency in your pom.xml
+1. Put the following dependency in your pom.xml
 
 ```xml
 <dependency>
   <groupId>com.lotaris.maven.rox.plugins</groupId>
   <artifactId>rox-commons-maven-plugin</artifactId>
-  <version>2.2.0</version>
+  <version>2.2.1</version>
 </dependenc>
 ```
 
